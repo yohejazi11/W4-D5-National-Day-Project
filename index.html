@@ -4,51 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <header class="main-header" id="mainHeader">
+        <nav class="main-nav">
+            <div class="logo-div">
+                <img class="logo" src="">
+            </div>
+            <ul class="main-nav-list">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="publicExplore.html">المعرض العام</a></li>
+                <li><button>الدخول</button></li>
+            </ul>
+        </nav>
 
     </header>
     <main>
         <!--intro to the web page-->
         <div class="intro-div" id="introDiv">
 
+
+            <div class="intro-img-div tuwaiq-intro-img-div">
+
+                <img class="intro-img tuwaiq-intro-img" src="images/tuwaiq1.png">
+
+            </div>
+
+            <div class="intro-img-div alula-intro-img-div">
+
+                <img class="intro-img alula-intro-img" src="images/alula.png">
+
+            </div>
+            <div class="intro-img-div salwa-intro-img-div">
+
+                <img class="intro-img salwa-intro-img" src="images/salwa.png">
+            </div>
+
+
+
+            <a class="intro-start-tour-btn" href="#startTourDiv">ابدء الجولة</a>
         </div>
 
-        <!--start the Tourist tour-->
-        <div class="start-tour-div">
+        <div class="tour-div" id="tourDiv">
+
+            <!--start the Tourist tour-->
+            <div class="start-tour-div" id="startTourDiv">
+                <!--enter your info to start Tourist tour-->
+
+                <div class="tourist-info-div show" id="touristInfoDiv">
+                    <div class="tourist-gender-select">
+                        <div class="boy-div">
+                            <img class="boy-img" src="images/boy.png">
+                            <button id="boyGender" class="boy-gender">ولد</button>
+
+                        </div>
+                        <div class="girl-div">
+                            <img class="girl-img" src="images/girl.png">
+                            <button id="girlGender" class="girl-gender">بنت</button>
+                        </div>
+
+                    </div>
+                    <div>
+                        <label for="touristName">الاسم : </label>
+                        <input type="text" id="touristName" class="input-form">
+                        <button onclick="slideFrame('touristInfoDiv','tourLocationSelectDiv')">ابدء</button>
+                    </div>
+
+                </div>
+                <div class="tour-location-select-div" id="tourLocationSelectDiv">
+
+                    <a class="diriyah-pin map-location-pin" id="diriyahPin" href="#diriyahCitySection">الدرعية</a>
+                    <a class="riyadh-pin map-location-pin" id="riyadhPin" href="#riyadhCitySection">الرياض</a>
+                    <a class="alula-pin map-location-pin" id="alulaPin" href="#alulaCitySection">العلا</a>
+                    <img class="ksa-base-map-img" src="images/ksaBaseMap.png">
+                </div>
+
+
+            </div>
+
+            <!--al duriyah Tourist tour-->
+            <div class="diriyah-city-section" id="diriyahCitySection">
+                <h1>الدرعية</h1>
+            </div>
+
+            <!--al riyadh Tourist tour-->
+            <div class="riyadh-city-section" id="riyadhCitySection">
+                <h1>الرياض</h1>
+
+            </div>
+
+            <!--Al-Ula city Tourist tour-->
+            <div class="alula-city-section" id="alulaCitySection">
+                <h1>العلا</h1>
+
+            </div>
 
         </div>
 
-        <!--al duriyah Tourist tour-->
-        <div class="diriyah-city-section">
+
+        <!--game tour-->
+        <div class="game-section">
 
         </div>
-
-        <!--al riyadh Tourist tour-->
-        <div class="riyadh-city-section">
-
-        </div>
-
-        <!--Al-Ula city Tourist tour-->
-        <div class="alula-city-section">
-
-        </div>
-
-        <!--najran city Tourist tour-->
-        <div class="najran-city-section">
-
-        </div>
-
 
     </main>
+
+    <div class="sign-in-div" id="signInDiv">
+        <input id="signInEmail" class="input-form" type="email">
+        <input id="signInPass" class="input-form" type="password">
+        <input id="signInBTN" class="sign-in-btn" type="submit">
+    </div>
+
+    <div class="sign-up-div" id="signUpDiv">
+        <input id="signUpUsername" class="input-form" placeholder="اسم المستخدم" type="text">
+        <input id="firstName" class="input-form" placeholder="الاسم الاول" type="text">
+        <input id="lastName" class="input-form" placeholder="اسم العائلة" type="text">
+        <input id="signUpEmail" class="input-form" placeholder="البريد الالكتروني" type="email">
+        <input id="signUpass" class="input-form" placeholder="كلمة المرور" type="password">
+        <input id="retry-pass" class="input-form" placeholder="تأكيد كلمة المرور" type="password">
+        <input id="signUpBTN" class="sign-up-btn" type="submit">
+
+    </div>
     <footer class="footer">
 
     </footer>
 
-
+<script src="main.js"></script>
 
 </body>
 
