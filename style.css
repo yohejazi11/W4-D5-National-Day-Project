@@ -560,6 +560,14 @@ main{
             border-radius: 5px;
             background-color: #DCAEE8;
         }
+
+        .input-name-last{
+            width: 50%;
+        }
+
+        .input-name-last input{
+            width: 80%;
+        }
     .main-header {
         position: fixed;
         z-index: 99999999;
