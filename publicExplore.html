@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTwo.css">
+
+</head>
+
+<body>
+    <header class="main-header" id="mainHeader">
+        <nav class="main-nav">
+            <div class="logo-div">
+                <img class="logo" src="">
+            </div>
+            <ul class="main-nav-list" id="mainNavList">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="publicExplore.html">المعرض العام</a></li>
+                <li><button class="sign-in-nav-btn" id="signInNavBTN">الدخول</button></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+
+        <div id="postsConainer" class="posts-conainer">
+
+        </div>
+
+
+
+
+
+        <div class="sign-in-div" id="signInDiv">
+            <button onclick="closeForm('signInDiv')" style="align-self: flex-start;">x</button>
+            <input id="signInEmail" class="input-form" type="email">
+            <input id="signInPass" class="input-form" type="password">
+            <button id="signInBTN" class="sign-in-btn">دخول</button>
+            <button id="makeAccountBTN" class="make-account-btn">انشاء حساب</button>
+        </div>
+
+        <div class="sign-up-div" id="signUpDiv">
+            <button onclick="closeForm('signUpDiv')" style="align-self: flex-start;">x</button>
+            <input id="signUpUsername" class="input-form" placeholder="اسم المستخدم" type="text">
+            <input id="firstName" class="input-form" placeholder="الاسم الاول" type="text">
+            <input id="signUpEmail" class="input-form" placeholder="البريد الالكتروني" type="email">
+            <input id="signUpass" class="input-form" placeholder="كلمة المرور" type="password">
+            <button id="signUpBTN" class="sign-up-btn">تسجيل</button>
+
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <div id="grayBG" class="grey-bg"></div>
+    <script src="main.js"></script>
+    <script src="explore.js"></script>
+
+</body>
+
+</html>

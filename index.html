@@ -14,10 +14,10 @@
             <div class="logo-div">
                 <img class="logo" src="">
             </div>
-            <ul class="main-nav-list">
+            <ul class="main-nav-list" id="mainNavList">
                 <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="publicExplore.html">المعرض العام</a></li>
-                <li><button>الدخول</button></li>
+                <li id="signInNavBTNli"><button class="sign-in-nav-btn" id="signInNavBTN">الدخول</button></li>
             </ul>
         </nav>
 
@@ -57,19 +57,21 @@
                 <div class="tourist-info-div show" id="touristInfoDiv">
                     <div class="tourist-gender-select">
                         <div class="boy-div">
-                            <img class="boy-img" src="images/boy.png">
-                            <button id="boyGender" class="boy-gender">ولد</button>
+                            
+                            <button id="boyGender" class="boy-gender">
+                                <img class="boy-img" src="images/boy.png">
+                            </button>
 
                         </div>
                         <div class="girl-div">
-                            <img class="girl-img" src="images/girl.png">
-                            <button id="girlGender" class="girl-gender">بنت</button>
+                            <button id="girlGender" class="girl-gender">
+                                <img class="girl-img" src="images/girl.png">
+                            </button>
                         </div>
 
                     </div>
                     <div>
-                        <label for="touristName">الاسم : </label>
-                        <input type="text" id="touristName" class="input-form">
+                        <input type="text" id="touristName" placeholder="الاسم" class="input-form">
                         <button onclick="slideFrame('touristInfoDiv','tourLocationSelectDiv')">ابدء</button>
                     </div>
 
@@ -87,19 +89,111 @@
 
             <!--al duriyah Tourist tour-->
             <div class="diriyah-city-section" id="diriyahCitySection">
-                <h1>الدرعية</h1>
+                <div id="diriyahFrame1" class="diriyah-tour-frame">
+                    <img class="salwa-img" src="images/salwa.png">
+                    <img class="land-bg-img" src="images/ground.png">
+                    <div class="conent-text-div"><span class="name-welcome"></span><br>
+                        القصر الملكي
+                        قصر سلوى في الدرعية
+                        بحي الطريف التاريخي الذي يسكن فيه الحاكم ويدير شؤون الدولة بني في عهد الإمام عبدالعزيز بن محمد
+                        بن سعود عند تأسيس حي الطريف في عهده رحمه الله،
+                        ١١٧٩هـ ١٧٦٥م
+                    </div>
+                </div>
+                <div id="diriyahFrame2" class="diriyah-tour-frame">
+                    <img class="emamabduah-img" src="images/emamabduah.png">
+                    <img class="wall-bg-img" src="images/mesuemINbBG.png">
+                    <div class="conent-text-div">
+                        زي الامام عبدالله بن سعود رحمه الله معروض في متحف الدرعية التاريخي
+                    </div>
+                </div>
+                <div id="diriyahFrame3" class="diriyah-tour-frame">
+                    <img class="camelSeat-img" src="images/camelSeat.png">
+                    <img class="wall-bg-img" src="images/mesuemINbBG.png">
+                    <div class="conent-text-div">
+
+                        الرحل: الرحل هو السرج الذي يوضع على الناقة ليجلس عليه الراكب. الوضين: يثبت الرحل على الناقة
+                        باستخدام حبل أو رباط مما كان متاحاً من المواد، كالصوف أو الشعر وينسج نسجاً.
+                    </div>
+                </div>
+                <img src="" class="tourist-in-frame">
+                <img src="images/turisetMan.png" class="tourist-man-in-frame">
+
+
+                <button id="diriyahbackBTN" class="nav-btn right-btn">السابق</button>
+                <button id="diriyahnextBTN" class="nav-btn left-btn">التالي</button>
             </div>
 
             <!--al riyadh Tourist tour-->
             <div class="riyadh-city-section" id="riyadhCitySection">
-                <h1>الرياض</h1>
+                <div id="riyadFrame1" class="riadh-tour-frame">
+                    <img class="masmak-img" src="images/masmakCastle.png">
+                    <img class="land-bg-img" src="images/ground.png">
+                    <div class="conent-text-div"><span class="name-welcome"></span><br>
+                        من قلب العاصمة الرياض، يقف قصر المصمك الذي يحظى بمكانة تاريخية عريقة ترتبط بالذاكرة الوطنية
+                        للسعودية، شامخًا، فهو ليس مجرد معلم تاريخي، بل شاهد حي على مرحلة حاسمة في تاريخ السعودية.
+                        يرتبط قصر المصمك ببطولات الملك عبدالعزيز بن عبدالرحمن آل سعود -رحمه الله-، حيث انطلقت من أبوابه رحلة توحيد البلاد وبناء المملكة الحديثة
+                    </div>
+                </div>
+                <div id="riyadFrame2" class="riadh-tour-frame">
+                    <img class="weapon-img" src="images/weaponMasmak.png">
+                    <img class="wall-bg-img" src="images/mesuemINbBG.png">
+                    <div class="conent-text-div">
+                        احد المدافع القديمة المتبقية التي استخدمت في الجيش السعودي معروض في ساحة القصر
+                    </div>
+                </div>
+                <div id="riyadFrame3" class="riadh-tour-frame">
+                    <img class="window-img" src="images/windowMasmak.png">
+                    <img class="wall-bg-img" src="images/mesuemINbBG.png">
+                    <div class="conent-text-div">
+                        احد نوافذ القصر المزينة بالنقوش التراثية السعودية
+                    </div>
+                </div>
+                <img src="" class="tourist-in-frame">
+                <img src="images/turisetMan.png" class="tourist-man-in-frame">
+
+
+                <button id="riyadhbackBTN" class="nav-btn right-btn">السابق</button>
+                <button id="riyadhnextBTN" class="nav-btn left-btn">التالي</button>
 
             </div>
 
             <!--Al-Ula city Tourist tour-->
             <div class="alula-city-section" id="alulaCitySection">
-                <h1>العلا</h1>
+                <div id="alulaFrame1" class="alula-tour-frame">
+                    <img class="alula-img" src="images/alula.png">
+                    <img class="land-bg-img" src="images/ground.png">
+                    <div class="conent-text-div"><span class="name-welcome"></span><br>
+                        مدفن لحيان (مقبرة الأسود)
+                        يعود المدفن إلى حضارة مملكة لحيان التي حكمت المنطقة في القرن السادس قبل الميلاد.
+                        يُعتبر جزءاً من التراث الثقافي للمملكة ومنطقة العلا التي كانت محطة رئيسية على طريق التجارة
+                        القديم.
+                    </div>
+                </div>
 
+                <div id="alulaFrame2" class="alula-tour-frame">
+                    <img class="elephent-rock-img" src="images/elephentrock.png">
+                    <img class="land-bg-img" src="images/ground.png">
+                    <div class="conent-text-div"><span class="name-welcome"></span><br>
+                        جبل الفيل هو عبارة عن صخرة ضخمة يبلغ ارتفاعها عن الأرض 52 متر وتتميز بشكلها الفريد الذي يشبه
+                        الفيل ومنه اكتسب هذا المسمى وتحيط بالصخرة مجموعة من الجبال
+                    </div>
+                </div>
+
+                <div id="alulaFrame3" class="alula-tour-frame">
+                    <img class="big-rock-img" src="images/bigRock.png">
+                    <img class="land-bg-img" src="images/ground.png">
+                    <div class="conent-text-div"><span class="name-welcome"></span><br>
+                        يقع جبل إثلب شرق مدينة العلا ، في قلب الحجر ، وهو موقع أثري في الحجاز ، وهو جبل طبيعي رائع وموقع
+                        ثقافي. تاريخياً ، كانت مكاناً للعبادة للأنباط الذين كانوا من البدو العرب القدامى من صحراء النقب.
+                    </div>
+                </div>
+                <img src="" class="tourist-in-frame">
+                <img src="images/turisetMan.png" class="tourist-man-in-frame">
+
+
+                <button id="alulabackBTN" class="nav-btn right-btn">السابق</button>
+                <button id="alulanextBTN" class="nav-btn left-btn">التالي</button>
             </div>
 
         </div>
@@ -113,26 +207,27 @@
     </main>
 
     <div class="sign-in-div" id="signInDiv">
+        <button onclick="closeForm('signInDiv')" style="align-self: flex-start;">x</button>
         <input id="signInEmail" class="input-form" type="email">
         <input id="signInPass" class="input-form" type="password">
-        <input id="signInBTN" class="sign-in-btn" type="submit">
+        <button id="signInBTN" class="sign-in-btn">دخول</button>
+        <button id="makeAccountBTN" class="make-account-btn">انشاء حساب</button>
     </div>
 
     <div class="sign-up-div" id="signUpDiv">
+        <button onclick="closeForm('signUpDiv')" style="align-self: flex-start;">x</button>
         <input id="signUpUsername" class="input-form" placeholder="اسم المستخدم" type="text">
         <input id="firstName" class="input-form" placeholder="الاسم الاول" type="text">
-        <input id="lastName" class="input-form" placeholder="اسم العائلة" type="text">
         <input id="signUpEmail" class="input-form" placeholder="البريد الالكتروني" type="email">
         <input id="signUpass" class="input-form" placeholder="كلمة المرور" type="password">
-        <input id="retry-pass" class="input-form" placeholder="تأكيد كلمة المرور" type="password">
-        <input id="signUpBTN" class="sign-up-btn" type="submit">
+        <button id="signUpBTN" class="sign-up-btn">تسجيل</button>
 
     </div>
     <footer class="footer">
-
+        
     </footer>
-
-<script src="main.js"></script>
+    <div id="grayBG" class="grey-bg"></div>
+    <script src="main.js"></script>
 
 </body>
 

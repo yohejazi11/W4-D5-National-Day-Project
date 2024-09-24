@@ -1,21 +1,25 @@
-:root{
+:root {
     --darkNavyColor: #610099;
-    --lightGreenColor:#d0ff80;
-    --XlightGreenColor:#e7ffbf;
-    --darkGreenColor:#70b300;
-    --wihteColor:#f1f0ef;
-    --baige:#6C9BCF;
+    --lightGreenColor: #d0ff80;
+    --XlightGreenColor: #e7ffbf;
+    --darkGreenColor: #70b300;
+    --wihteColor: #f1f0ef;
+    --baige: #6C9BCF;
+    --baige: #DCAEE8;
+
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: var(--baige);
-    transition: 0.3s;
 }
-.main-header{
+
+@media only screen and (max-width: 600px) { 
+
+    .main-header {
     position: fixed;
-    z-index: 100;
+    z-index: 99999999;
     background-color: var(--darkNavyColor);
     height: 15vh;
     width: calc(100% - 40px);
@@ -23,7 +27,7 @@ body{
     background-image: url(images/Naksha-light-green.png);
     background-size: 70%;
     background-repeat: repeat-x;
-    border-bottom: 10px solid var(--XlightGreenColor) ;
+    border-bottom: 10px solid var(--XlightGreenColor);
     box-shadow: 0px 9px 0px var(--lightGreenColor);
     box-shadow: 0px 9px 20px 20px #efffd5;
     box-shadow: 0px 5px 20px 0px #030500;
@@ -32,22 +36,23 @@ body{
     animation-duration: 3s;
 }
 
-@keyframes slide-header{
-    0%{
+@keyframes slide-header {
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         top: 0%;
 
     }
 
 }
 
-    .hidden {
-        transform: translateY(-100%);
-    }
+.hidden {
+    transform: translateY(-100%);
+}
 
-.main-nav{
+.main-nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -55,15 +60,11 @@ body{
     height: calc(100% - 20px);
 }
 
-.logo-div{
+.logo-div {}
 
-}
+.logo {}
 
-.logo{
-
-}
-
-.main-nav-list{
+.main-nav-list {
     display: flex;
     gap: 2rem;
     list-style: none;
@@ -71,30 +72,38 @@ body{
     margin: 0;
 }
 
+.main-nav-list li a {
+    text-decoration: none;
+    background-color: #DCAEE8;
+    
+}
 
+main{
+    width: 100%;
+}
 
-.intro-div{
+.intro-div {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--baige);
     position: relative;
 }
 
-.intro-img-div{
+.intro-img-div {
     position: absolute;
     width: 60vw;
     height: fit-content;
 }
 
-.tuwaiq-intro-img-div{
-    bottom:3%;
-    width: 100vw;
+.tuwaiq-intro-img-div {
+    bottom: 2%;
+    width: 100%;
     animation-name: slide-intro-main-image;
     animation-duration: 6s;
     animation-delay: 0.2s;
 }
 
-.alula-intro-img-div{
+.alula-intro-img-div {
     bottom: -1%;
     left: -10%;
     z-index: 10;
@@ -102,144 +111,183 @@ body{
     animation-duration: 6s;
 }
 
-.salwa-intro-img-div{
+.salwa-intro-img-div {
     bottom: -1%;
-    right: -4%;
+    right: 0%;
     animation-name: slide-intro-sub-image;
     animation-duration: 4s;
 }
+
 .intro-img {
     width: 100%;
     height: 100%;
 }
 
-@keyframes slide-intro-sub-image{
-    0%{
+@keyframes slide-intro-sub-image {
+    0% {
         bottom: -100%;
         opacity: 0;
     }
 
-    50%{
+    50% {
         opacity: 50;
     }
-    80%{
+
+    80% {
         bottom: 1%;
         opacity: 100;
 
     }
-    100%{
+
+    100% {
         bottom: -1%;
 
     }
 
 }
 
-@keyframes slide-intro-main-image{
-    0%{
-        bottom: -200%;
+@keyframes slide-intro-main-image {
+    0% {
+        bottom: -100%;
 
     }
-    80%{
+
+    80% {
+        bottom: 2.5%;
+
+    }
+
+    100% {
         bottom: 2%;
 
     }
-    100%{
-        bottom: 3%;
-
-    }
 
 }
 
 
 
-.tour-div{
-
+.tour-div {
+    width: 100%;
 }
 
-.intro-start-tour-btn{
+.intro-start-tour-btn {
     position: absolute;
     bottom: 20%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation-name: intro-start-tour;
+    animation-duration: 5s;
+}
+
+@keyframes intro-start-tour {
+    0% {}
+
+    50% {}
+
+    100% {}
+
 }
 
 .start-tour-div,
 .diriyah-city-section,
 .riyadh-city-section,
 .alula-city-section,
-.najran-city-section{
+.najran-city-section {
     height: 100vh;
-    border: 1px solid black;
+    width: 100%;
     position: relative;
 }
 
 .tour-location-select-div.show,
-.tourist-info-div.show{
+.tourist-info-div.show {
     opacity: 100%;
     display: flex;
 
 }
 
-.tourist-info-div{
+.tourist-info-div {
     position: absolute;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
     height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.7);;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    ;
     opacity: 0%;
     z-index: 10;
     transition: .3s;
 
 }
-.tourist-gender-select{
-    display: flex;
-    gap: 5rem;
-}
 
-.boy-div,
-.girl-div{
+.tourist-gender-select {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.girl-div{
+
+.boy-div,
+.girl-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: var(--baige);
+    padding: 1rem 3rem;
+    height: 30vh;
+    border: 1px solid var(--darkNavyColor);
+    transition: .3s;
 }
+
+.boy-div:hover,
+.girl-div:hover {
+    transform: translateY(-3%);
+}
+
+.girl-div {}
 
 .boy-img,
-.girl-img{
+.girl-img {
     border-radius: 10px;
+    height: 100%;
 
 }
 
-.tour-location-select-div{
+.boy-gender,
+.girl-gender{
+    border: none;
+    background-color: transparent;
+}
+
+.tour-location-select-div {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     opacity: 0%;
     z-index: 8;
     transition: .3s;
 }
 
-.city-hover{
+.city-hover {
     position: absolute;
     z-index: 9;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
-.ksa-base-map-img{
-    width: 100vw;
+.ksa-base-map-img {
+    width: 100%;
     height: 100vh;
 }
 
-.map-location-pin{
+.map-location-pin {
     position: absolute;
     text-decoration: none;
     font-size: 1.5rem;
@@ -248,25 +296,207 @@ body{
     z-index: 12;
 }
 
-.diriyah-pin{
+.diriyah-pin {
     top: 43%;
     left: 48%;
 }
 
-.riyadh-pin{
+.riyadh-pin {
     top: 41%;
     left: 54%;
 }
 
-.alula-pin{
+.alula-pin {
     top: 33%;
     left: 30%;
 }
 
+/*museum*/
+.diriyah-tour-frame,
+.riadh-tour-frame,
+.alula-tour-frame {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.conent-text-div {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: rgb(108, 155, 207, 0.8);
+    color: black;
+    width: 80%;
+    height: fit-content;
+    z-index: 999;
+    border-radius: 10px;
+    text-align: right;
+    padding: 20px 15px;
+    font-size: 1.5rem;
+    align-content: center;
+    line-height: 1.5;
+}
+
+.wall-bg-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.land-bg-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*diriyah section*/
+
+.salwa-img {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    z-index: 0;
+}
+
+.camelSeat-img,
+.emamabduah-img {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+}
+
+.diriyah-tour-frame {
+    display: none;
+}
+
+.diriyah-tour-frame.show {
+    display: block;
+
+}
+
+/*riadh section*/
+
+.masmak-img {
+    position: absolute;
+    bottom: 4%;
+    width: 100%;
+    z-index: 2;
+
+}
+
+.weapon-img,
+.window-img {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 88%;
+    height: 85%;
+    z-index: 2;
+}
+
+.weapon-img {
+    bottom: 0%;
+
+}
+
+.riadh-tour-frame {
+    display: none;
+}
+
+.riadh-tour-frame.show {
+    display: block;
+
+}
+
+/*alula section*/
+
+.alula-img {
+    position: absolute;
+    bottom: 5%;
+    width: 78%;
+    z-index: 0;
+}
+
+.elephent-rock-img {
+    position: absolute;
+    bottom: 4%;
+    left: 21%;
+    width: 74%;
+    z-index: 2;
+}
+
+.big-rock-img {
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+    width: 88%;
+    z-index: 2;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.right-btn {
+    right: 10px;
+    display: none;
+}
+
+.left-btn {
+    left: 10px;
+
+}
+
+.alula-tour-frame {
+    display: none;
+}
+
+.alula-tour-frame.show {
+    display: block;
+
+}
+
+/**/
+.tourist-in-frame {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    width: 30%;
+    z-index: 3;
+
+}
+
+.tourist-man-in-frame {
+    position: absolute;
+    bottom: -6px;
+    right: -6%;
+    z-index: 3;
+    height: 45%;
+}
 
 
+/*user option*/
+.add-post-div,
 .sign-up-div,
-.sign-in-div{
+.sign-in-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,35 +504,618 @@ body{
     padding: 2rem;
     width: 40vw;
     position: absolute;
-    top: 50%;
+    top: -100%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #610099;
     border-radius: 10px;
-    z-index: 20;
-    background-image: url(images/Naksha-light-green.png),url(images/Naksha-light-green.png);
+    z-index: 999999999;
+    background-image: url(images/Naksha-light-green.png), url(images/Naksha-light-green.png);
     background-size: 70%;
-    background-position-y: top,bottom;
+    background-position-y: top, bottom;
     background-repeat: repeat-x;
+    opacity: 0;
+    transition: 1s;
 }
 
+.show-sign-form {
+    top: 50%;
+    opacity: 100;
+}
 
+.grey-bg {
+    display: none;
+    position: absolute;
+    top: 0%;
+    height: 500vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 19;
+    transition: 1s;
+}
 
+.grey-bg-show {
+    display: block;
+    opacity: 100;
+}
 
-
-
-
-
-
-
-
-
-
-.footer{
+.footer {
     height: 40vh;
-    background-image: url(images/Naksha-nave.png),url(images/Naksha-nave.png);
+
+    background-image: url(images/Naksha-nave.png), url(images/Naksha-nave.png);
     background-color: var(--lightGreenColor);
     background-repeat: repeat-x;
     background-size: 100%;
-    background-position: top,bottom;
+    background-position: top, bottom;
+}}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+        input{
+            padding: 10px;
+            border: 2px solid #d0ff80;
+            border-radius: 5px;
+            background-color: #DCAEE8;
+        }
+    .main-header {
+        position: fixed;
+        z-index: 99999999;
+        background-color: var(--darkNavyColor);
+        height: 15vh;
+        width: calc(100% - 40px);
+        padding: 0 20px;
+        background-image: url(images/Naksha-light-green.png);
+        background-size: 70%;
+        background-repeat: repeat-x;
+        border-bottom: 10px solid var(--XlightGreenColor);
+        box-shadow: 0px 9px 0px var(--lightGreenColor);
+        box-shadow: 0px 9px 20px 20px #efffd5;
+        box-shadow: 0px 5px 20px 0px #030500;
+        transition: 1s;
+        animation-name: slide-header;
+        animation-duration: 3s;
+    }
+
+    @keyframes slide-header {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        100% {
+            top: 0%;
+
+        }
+
+    }
+
+    .hidden {
+        transform: translateY(-100%);
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 20px 0;
+        height: calc(100% - 20px);
+    }
+
+    .logo-div {}
+
+    .logo {}
+
+    .main-nav-list {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .main-nav-list li a, button {
+        text-decoration: none;
+        background-color: #DCAEE8;
+        padding: 10px;
+        color: #610099;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 2px solid #d0ff80;
+        border-radius: 5px;
+        
+    }
+
+    .main-nav-list li a:hover, button:hover {
+        background-color: #610099;
+        color: #d0ff80;        
+    }
+
+
+    .intro-div {
+        height: 100vh;
+        width: 100%;
+        background-color: var(--baige);
+        position: relative;
+    }
+
+    .intro-img-div {
+        position: absolute;
+        width: 60vw;
+        height: fit-content;
+    }
+
+    .tuwaiq-intro-img-div {
+        bottom: 11%;
+        width: 100%;
+        animation-name: slide-intro-main-image;
+        animation-duration: 6s;
+        animation-delay: 0.2s;
+    }
+
+    .alula-intro-img-div {
+        bottom: -1%;
+        left: -10%;
+        z-index: 10;
+        animation-name: slide-intro-sub-image;
+        animation-duration: 6s;
+    }
+
+    .salwa-intro-img-div {
+        bottom: -1%;
+        right: 0%;
+        animation-name: slide-intro-sub-image;
+        animation-duration: 4s;
+    }
+
+    .intro-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes slide-intro-sub-image {
+        0% {
+            bottom: -100%;
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 50;
+        }
+
+        80% {
+            bottom: 1%;
+            opacity: 100;
+
+        }
+
+        100% {
+            bottom: -1%;
+
+        }
+
+    }
+
+    @keyframes slide-intro-main-image {
+        0% {
+            bottom: -100%;
+
+        }
+
+        80% {
+            bottom: 12%;
+
+        }
+
+        100% {
+            bottom: 11%;
+
+        }
+
+    }
+
+
+
+    .tour-div {
+        width: 100%;
+    }
+
+    .intro-start-tour-btn {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        animation-name: intro-start-tour;
+        animation-duration: 5s;
+        text-decoration: none;
+        background-color: #DCAEE8;
+        padding: 10px;
+        color: #610099;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 2px solid #d0ff80;
+        border-radius: 5px;
+    }
+
+    .intro-start-tour-btn:hover{
+        background-color: #610099;
+        color: #d0ff80;
+
+    }
+
+    @keyframes intro-start-tour {
+        0% {
+            bottom: -100%;
+
+        }
+
+        90% {
+            bottom: 22%;
+
+        }
+
+        100% {
+            bottom: 20%;
+
+        }
+
+    }
+
+    .start-tour-div,
+    .diriyah-city-section,
+    .riyadh-city-section,
+    .alula-city-section,
+    .najran-city-section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .tour-location-select-div.show,
+    .tourist-info-div.show {
+        opacity: 100%;
+        display: flex;
+
+    }
+
+    .tourist-info-div {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        ;
+        opacity: 0%;
+        z-index: 10;
+        transition: .3s;
+
+    }
+
+    .tourist-gender-select {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .boy-div,
+    .girl-div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 10px;
+        background-color: var(--baige);
+        padding: 1rem 3rem;
+        border: 1px solid var(--darkNavyColor);
+        transition: .3s;
+    }
+
+    .boy-div:hover,
+    .girl-div:hover {
+        transform: translateY(-3%);
+    }
+
+    .girl-div {}
+
+    .boy-img,
+    .girl-img {
+        border-radius: 10px;
+
+    }
+    .boy-gender,
+    .girl-gender{
+        border: none;
+        background-color: transparent;
+    }
+    .tour-location-select-div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        opacity: 0%;
+        z-index: 8;
+        transition: .3s;
+    }
+
+    .city-hover {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .ksa-base-map-img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .map-location-pin {
+        position: absolute;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #e7ffbf;
+        font-weight: bold;
+        z-index: 12;
+    }
+
+    .diriyah-pin {
+        top: 43%;
+        left: 48%;
+    }
+
+    .riyadh-pin {
+        top: 41%;
+        left: 54%;
+    }
+
+    .alula-pin {
+        top: 33%;
+        left: 30%;
+    }
+
+    /*museum*/
+    .diriyah-tour-frame,
+    .riadh-tour-frame,
+    .alula-tour-frame {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    .conent-text-div {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        background-color: rgb(108, 155, 207, 0.8);
+        color: black;
+        width: 60%;
+        height: fit-content;
+        z-index: 999;
+        border-radius: 10px;
+        text-align: right;
+        padding: 20px 15px;
+        font-size: 1.5rem;
+        align-content: center;
+        line-height: 1.5;
+    }
+
+    .wall-bg-img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .land-bg-img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /*diriyah section*/
+
+    .salwa-img {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 80%;
+        z-index: 0;
+    }
+
+    .camelSeat-img,
+    .emamabduah-img {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 50%;
+        height: 90%;
+        z-index: 2;
+    }
+
+    .diriyah-tour-frame {
+        display: none;
+    }
+
+    .diriyah-tour-frame.show {
+        display: block;
+
+    }
+
+    /*riadh section*/
+
+    .masmak-img {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        z-index: 2;
+
+    }
+
+    .weapon-img,
+    .window-img {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 40%;
+        height: 80%;
+        z-index: 2;
+    }
+
+    .weapon-img {
+        bottom: 0%;
+
+    }
+
+    .riadh-tour-frame {
+        display: none;
+    }
+
+    .riadh-tour-frame.show {
+        display: block;
+
+    }
+
+    /*alula section*/
+
+    .alula-img {
+        position: absolute;
+        bottom: 25%;
+        width: 78%;
+        z-index: 0;
+    }
+
+    .elephent-rock-img {
+        position: absolute;
+        bottom: 20%;
+        left: 25%;
+        width: 52%;
+        z-index: 2;
+    }
+
+    .big-rock-img {
+        position: absolute;
+        bottom: 18%;
+        left: 10%;
+        width: 80%;
+        z-index: 2;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .right-btn {
+        right: 10px;
+        display: none;
+    }
+
+    .left-btn {
+        left: 10px;
+
+    }
+
+    .alula-tour-frame {
+        display: none;
+    }
+
+    .alula-tour-frame.show {
+        display: block;
+
+    }
+
+    /**/
+    .tourist-in-frame {
+        position: absolute;
+        bottom: 2rem;
+        left: 15%;
+        z-index: 3;
+
+    }
+
+    .tourist-man-in-frame {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        z-index: 3;
+        height: 85%;
+    }
+
+
+    /*user option*/
+    .add-post-div,
+    .sign-up-div,
+    .sign-in-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+        width: 40vw;
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #610099;
+        border-radius: 10px;
+        z-index: 99999999999;
+        background-image: url(images/Naksha-light-green.png), url(images/Naksha-light-green.png);
+        background-size: 70%;
+        background-position-y: top, bottom;
+        background-repeat: repeat-x;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .show-sign-form {
+        top: 50%;
+        opacity: 100;
+    }
+
+    .grey-bg {
+        display: none;
+        position: absolute;
+        top: 0%;
+        height: 500vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        z-index: 19;
+        transition: 1s;
+    }
+
+    .grey-bg-show {
+        display: block;
+        opacity: 100;
+    }
+
+    .footer {
+        height: 40vh;
+
+        background-image: url(images/Naksha-nave.png), url(images/Naksha-nave.png);
+        background-color: var(--lightGreenColor);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: top, bottom;
+    }
+
 }
